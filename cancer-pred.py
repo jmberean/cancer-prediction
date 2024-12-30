@@ -26,7 +26,6 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
 
 # Create a sequential neural network model
 model = tf.keras.models.Sequential([
-    tf.keras.layers.Dense(256, input_shape=(x_train.shape[1],), activation='relu'),
     tf.keras.layers.Dense(128, input_shape=(x_train.shape[1],), activation='relu'),
     tf.keras.layers.Dense(64, activation='relu'),
     tf.keras.layers.Dense(1, activation='sigmoid')
